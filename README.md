@@ -1,4 +1,4 @@
-# grunt-html-minify
+# grunt-html-minify [![Build Status](https://travis-ci.org/yize/grunt-html-minify.png?branch=master)](https://travis-ci.org/yize/grunt-html-minify)
 
 > html-minify for grunt
 
