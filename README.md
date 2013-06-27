@@ -37,46 +37,37 @@ grunt.initConfig({
 
 ### Options
 
-#### options.separator
+#### options.charset
 Type: `String`
-Default value: `',  '`
+Default value: `'utf-8'`
 
-A string value that is used to do something with whatever.
-
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
-
-A string value that is used to do something else with whatever else.
+A string value that is used to assign the input file encoding.
 
 ### Usage Examples
 
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
+#### normal(UTF-8 files)
 
 ```js
 grunt.initConfig({
   html_minify: {
     options: {},
     files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+      'dest/whatever.html': ['src/whatever.html'],
     },
   },
 })
 ```
 
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
+#### assign file encoding
 
 ```js
 grunt.initConfig({
   html_minify: {
     options: {
-      separator: ': ',
-      punctuation: ' !!!',
+      charset:'gbk'
     },
     files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+      'dest/whatever.html': ['src/whatever.html'],
     },
   },
 })
@@ -86,4 +77,5 @@ grunt.initConfig({
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
-_(Nothing yet)_
+
+2013-06-27 first official release
