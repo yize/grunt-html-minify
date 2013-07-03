@@ -27,7 +27,7 @@ exports.html_minify = {
         // setup here if necessary
         done();
     },
-    default_options: function (test) {
+    normal: function (test) {
         test.expect(1);
 
         var actual = grunt.file.read('test/fixtures/index.html');
