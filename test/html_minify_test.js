@@ -37,6 +37,16 @@ exports.html_minify = {
         test.done();
     },
 
+    web:function(test){
+        test.expect(1);
+
+        var actual = grunt.file.read('test/fixtures/tags.html');
+        var expected = grunt.file.read('test/expected/tags.html');
+        test.equal(actual, expected, 'should describe what the default behavior is.');
+
+        test.done();
+    },
+
     gbk: function (test) {
         test.expect(1);
 

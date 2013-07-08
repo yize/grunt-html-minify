@@ -44,6 +44,11 @@ module.exports = function (grunt) {
                 files: {
                     'test/fixtures/index-gbk.html': ['test/ori/index-gbk.html']
                 }
+            },
+            web: {
+                files: {
+                    'test/fixtures/tags.html': ['test/ori/tags.html']
+                }
             }
         },
 

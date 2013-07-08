@@ -8,7 +8,7 @@
 
 'use strict';
 
-var minify = require('html-minify');
+var minify = require('html-minify').minify;
 
 module.exports = function (grunt) {
 
@@ -20,7 +20,9 @@ module.exports = function (grunt) {
         var options = this.options({
             source: null,
             target: null,
-            charset: 'utf-8'
+            charset: 'utf-8',
+            collapseWhitespace: true,
+            removeComments: true
         });
 
         // Iterate over all specified file groups.
@@ -38,7 +40,7 @@ module.exports = function (grunt) {
                     // Read file source.
                     return grunt.file.read(filepath, {encoding: options.charset});
                 }).join('');
-            var content = minify(src);
+            var content = minify(src,options);
             // Handle options.
             // Write the destination file.
 

@@ -1,7 +1,7 @@
 {
   "name": "grunt-html-minify",
   "description": "html-minify for grunt",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "homepage": "https://github.com/yize/grunt-html-minify",
   "author": {
     "name": "yize",
@@ -41,6 +41,6 @@
     "gruntplugin"
   ],
   "dependencies": {
-    "html-minify": "~0.2.0"
+    "html-minify": "~0.3.0"
   }
 }
