@@ -61,6 +61,26 @@ grunt.initConfig({
 })
 ```
 
+```js
+grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
+    html_minify: {
+      options: {
+      },
+      all: {
+        files:[
+        {
+          expand: true,
+          cwd: './',
+          src: ['*.html'],
+          dest: './test/',
+          ext:'-min.html'}
+          ]
+        }
+      }
+    });
+```
+
 #### assign file encoding
 
 ```js
