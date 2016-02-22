@@ -40,7 +40,12 @@ module.exports = function (grunt) {
                     // Read file source.
                     return grunt.file.read(filepath, {encoding: options.charset});
                 }).join('');
-            var content = minify(src,options);
+            var content;
+            try{
+                content = minify(src,options);
+            } catch (err){
+                grunt.fail.fatal('Error minifying file: '+f.src+'. '+err);
+            }
             // Handle options.
             // Write the destination file.
 
